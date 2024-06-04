@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "747528054255",
+    "project_id": "aether-4e55a",
+    "storage_bucket": "aether-4e55a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747528054255:android:0c94d682c003a5d56a821a",
+        "android_client_info": {
+          "package_name": "com.pkmaether.aether"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUnJyvHGCGL8d7FP6kX6vLyOCtuliImro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

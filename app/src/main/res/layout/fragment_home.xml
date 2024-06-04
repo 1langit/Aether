@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.HomeFragment"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_current_ispu"
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_card_title"
+                style="@style/TextAppearance.Material3.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rata-rata ISPU saat ini"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintStart_toEndOf="@+id/txt_card_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_category"
+                style="@style/chip_ispu_baik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baik"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_card_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_ispu"
+                style="@style/TextAppearance.Material3.DisplayMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chip_category" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_so2"
+                style="@style/TextAppearance.Material3.LabelLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="S02 0"
+                app:layout_constraintEnd_toStartOf="@+id/dervider_vertical_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_horizontal" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dervider_vertical_1"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_horizontal"
+                app:layout_constraintHorizontal_bias="0.333"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_c0"
+                style="@style/TextAppearance.Material3.LabelLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C0 0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/dervider_vertical_2"
+                app:layout_constraintStart_toEndOf="@+id/dervider_vertical_1"
+                app:layout_constraintTop_toBottomOf="@+id/divider_horizontal" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dervider_vertical_2"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_horizontal"
+                app:layout_constraintHorizontal_bias="0.666"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_o3"
+                style="@style/TextAppearance.Material3.LabelLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO2 0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dervider_vertical_2"
+                app:layout_constraintTop_toBottomOf="@+id/divider_horizontal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_chatbot"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/md_theme_surfaceContainer"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="16dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_chatbot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chatbot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_category"
+                style="@style/TextAppearance.Material3.TitleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Chatbot"
+                app:layout_constraintStart_toEndOf="@+id/img_chatbot"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_date"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Chat dengan chatbot Aether"
+                app:layout_constraintStart_toEndOf="@+id/img_chatbot"
+                app:layout_constraintTop_toBottomOf="@+id/txt_category" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextAppearance.Material3.TitleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Unggulan" />
+
+    <include
+        android:id="@+id/featured"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        layout="@layout/item_information" />
+
+</LinearLayout>

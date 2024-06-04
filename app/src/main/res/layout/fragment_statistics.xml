@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.statistic.StatisticsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_particulate"
+                    style="@style/TextAppearance.Material3.TitleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kadar" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.Material3.TitleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perhitugan ISPU"
+                    android:textFontWeight="500"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_ispu"
+                    style="@style/TextAppearance.Material3.DisplayMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="0" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_category"
+                    style="@style/chip_ispu_baik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baik" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.Material3.BodyMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/ispu_baik" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

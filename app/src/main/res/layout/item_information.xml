@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/body"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    app:cardBackgroundColor="@color/md_theme_surfaceContainerLow">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_information"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_placeholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_title"
+            style="@style/TextAppearance.Material3.TitleMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Tips Seputar Mutu Udara"
+            app:layout_constraintBottom_toTopOf="@+id/txt_preview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_information"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_preview"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/lorem"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_information"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
