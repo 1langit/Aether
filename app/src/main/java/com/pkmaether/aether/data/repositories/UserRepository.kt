@@ -8,7 +8,7 @@ import com.pkmaether.aether.data.firebase.FirebaseAuthClient
 import com.pkmaether.aether.data.firebase.FirestoreClient
 import com.pkmaether.aether.data.models.User
 
-class FirestoreUserRepository(context: Context) {
+class UserRepository(context: Context) {
 
     private val usersCollection: CollectionReference
         get() = FirestoreClient.firestoreInstance.collection("users")

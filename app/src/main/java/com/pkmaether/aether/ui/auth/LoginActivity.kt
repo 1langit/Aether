@@ -9,7 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.pkmaether.aether.R
 import com.pkmaether.aether.data.PrefManager
-import com.pkmaether.aether.data.repositories.FirestoreUserRepository
+import com.pkmaether.aether.data.repositories.UserRepository
 import com.pkmaether.aether.databinding.ActivityLoginBinding
 import com.pkmaether.aether.ui.dashboard.DashboardActivity
 
@@ -40,8 +40,8 @@ class LoginActivity : AppCompatActivity() {
                 val email = edtEmail.text.toString()
                 val password = edtPassword.text.toString()
                 if (email.isNotBlank() && password.isNotBlank()) {
-                    val firestoreUserRepository = FirestoreUserRepository(this@LoginActivity)
-                    firestoreUserRepository.loginUser(
+                    val userRepository = UserRepository(this@LoginActivity)
+                    userRepository.loginUser(
                         email,
                         password,
                         {

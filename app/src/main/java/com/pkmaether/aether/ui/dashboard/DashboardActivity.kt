@@ -41,12 +41,12 @@ class DashboardActivity : AppCompatActivity() {
             }
 
             toolbar.setNavigationOnClickListener {
-                val newIntent = Intent(this@DashboardActivity, ProfileActivity::class.java)
+                val newIntent = Intent(this@DashboardActivity, SettingsActivity::class.java)
                 startActivity(newIntent)
             }
 
             toolbar.setOnMenuItemClickListener {
-                val newIntent = Intent(this@DashboardActivity, SettingsActivity::class.java)
+                val newIntent = Intent(this@DashboardActivity, ProfileActivity::class.java)
                 startActivity(newIntent)
                 true
             }

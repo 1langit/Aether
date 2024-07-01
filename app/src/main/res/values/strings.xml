@@ -5,6 +5,11 @@
 
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque justo et orci tincidunt, non egestas velit rutrum. Vivamus porta sapien a metus vehicula fringilla. Curabitur luctus viverra massa vitae tincidunt. Sed sed auctor turpis. Vivamus eget risus non turpis mollis convallis at eu augue. Pellentesque fermentum nisi id mauris egestas aliquet. Pellentesque velit leo, volutpat a gravida et, condimentum sit amet nisl.\n\nFusce dignissim fringilla metus quis maximus. Vivamus et vestibulum risus. Vivamus urna purus, pellentesque eget diam blandit, maximus finibus augue. In felis nibh, maximus ut suscipit et, fringilla et ante. Quisque ornare pharetra nisi, et ornare quam rhoncus malesuada.</string>
 
+    <string name="about">
+        Aplikasi ini merupakan bagian dari proyek AETHER. AETHER merupakan sistem smart filter cerobong industri dari bahan alami terintegrasi IoT dan AI. Alat ini mengurangi dampak polusi pencemaran udara dengan konsep green-technology ramah lingkungan menggunakan teknologi Internet of Things yang diintegrasikan dengan sistem kecerdasan buatan.
+        \n\nSolusi yang ditawarkan menggunakan sistem terintegrasi teknologi canggih, yang dapat mendeteksi, mengukur, dan menganalisis, serta mengendalikan polusi udara secara cerdas sesuai dengan ISPU (Indeks Standar Pencemaran Udara) yang telah ditetapkan.
+    </string>
+
     <string name="ispu_baik">Tingkat mutu udara sangat baik, tidak memberikan efek negatif terhadap manusia, hewan, dan tumbuhan.</string>
     <string name="ispu_sedang">Tingkat mutu udara masih dapat diterima manusia, hewan, dan tumbuhan.</string>
     <string name="ispu_tidak_sehat">Tingkat mutu udara bersifat merugikan pada manusia, hewan, dan tumbuhan.</string>
@@ -12,7 +17,7 @@
     <string name="ispu_berbahaya">Tingkat mutu udara dapat merugikan kesehatan secara serius pada populasi dan perlu penanganan cepat.</string>
 
     <string name="chat_prompt">
-        Kau adalah chatbot pada aplikasi Aether. Aether adalah apikasi pemantauan kualitas udara berbasis ISPU (indeks standar pencemaran udara). Aether terhubung dengan perangkat filtrasi dan sistem IoT yang mendeteksi kadar zat pencemar sebelum dan sesudah udara terfiltrasi. Aether akan mengambil informasi berupa SO2, CO, dan O3 lalu mengubahnya ke ISPU dan mengukur tingkat keparahan udara. Tugasmu adalah:
+        Kau adalah chatbot pada aplikasi Aether. Aether adalah apikasi pemantauan kualitas udara berbasis ISPU (indeks standar pencemaran udara) yang ditetapkan oleh Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia. Aether terhubung dengan perangkat filtrasi dan sistem IoT yang mendeteksi kadar zat pencemar sebelum dan sesudah udara terfiltrasi. Aether akan mengambil informasi berupa SO2, CO, dan O3 lalu mengubahnya ke ISPU dan mengukur tingkat keparahan udara. Tugasmu adalah:
         1. Menyimpulkan data yang berhubungan dengan ISPU jika ditanya oleh pengguna
         2. Memberi informasi terkait polusi udara dan penanganannya
         3. Memberi informasi terkait alat Aether

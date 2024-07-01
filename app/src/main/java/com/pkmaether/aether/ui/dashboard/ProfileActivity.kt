@@ -8,7 +8,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.pkmaether.aether.R
 import com.pkmaether.aether.data.PrefManager
-import com.pkmaether.aether.data.repositories.FirestoreUserRepository
+import com.pkmaether.aether.data.repositories.ChatLocalRepository
+import com.pkmaether.aether.data.repositories.UserRepository
 import com.pkmaether.aether.databinding.ActivityProfileBinding
 import com.pkmaether.aether.ui.auth.LoginActivity
 
@@ -40,8 +41,12 @@ class ProfileActivity : AppCompatActivity() {
             btnAddress.text = prefManager.getAddress()
 
             btnLogout.setOnClickListener {
-                val firestoreUserRepository = FirestoreUserRepository(this@ProfileActivity)
-                firestoreUserRepository.logoutUser()
+                val chatLocalRepository = ChatLocalRepository(application)
+                chatLocalRepository.clearChatHistory()
+
+                val userRepository = UserRepository(this@ProfileActivity)
+                userRepository.logoutUser()
+
                 val newIntent = Intent(this@ProfileActivity, LoginActivity::class.java)
                 newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(newIntent)

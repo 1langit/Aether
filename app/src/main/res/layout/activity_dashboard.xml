@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu="@menu/top_bar_menu"
-            app:navigationIcon="@drawable/ic_person"
+            app:navigationIcon="@drawable/ic_settings"
             app:navigationIconTint="@color/md_theme_onSurface"
             app:title="AETHER"
             app:titleCentered="true" />

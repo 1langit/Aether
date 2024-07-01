@@ -5,13 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/md_theme_surface"
     tools:context=".ui.chatbot.ChatbotActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rv_chat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="12dp"
+        android:padding="8dp"
+        tools:listitem="@layout/item_chat_right"
         app:layout_constraintBottom_toTopOf="@+id/input_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +36,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ketik pesan"
+            android:inputType="textCapSentences|textMultiLine"
             android:maxLines="6"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_response"
+        style="@style/Widget.Material3.CircularProgressIndicator.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:padding="4dp"
+        android:background="@color/md_theme_surfaceContainerHighest"
+        android:indeterminate="true"
+        android:translationY="-3dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_message"
+        app:layout_constraintTop_toBottomOf="@+id/rv_chat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

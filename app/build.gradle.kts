@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.googleGmsGoogleServices)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -55,6 +56,8 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("com.google.ai.client.generativeai:generativeai:0.3.0")
+    implementation("io.noties.markwon:core:4.6.2")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

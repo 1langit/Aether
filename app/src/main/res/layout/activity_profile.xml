@@ -13,6 +13,7 @@
         android:layout_height="100dp"
         android:background="@color/md_theme_surfaceContainerHighest"
         android:src="@drawable/ic_person"
+        app:tint="@color/md_theme_surface"
         app:contentPadding="24dp"
         app:shapeAppearance="@style/CircularShapeAppearance"
         app:layout_constraintBottom_toTopOf="@+id/txt_company"

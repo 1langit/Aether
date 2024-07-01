@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.pkmaether.aether.data.models.User
-import com.pkmaether.aether.data.repositories.FirestoreUserRepository
+import com.pkmaether.aether.data.repositories.UserRepository
 import com.pkmaether.aether.databinding.FragmentRegisterPage2Binding
 import com.pkmaether.aether.ui.dashboard.DashboardActivity
 
@@ -31,8 +31,8 @@ class RegisterPage2Fragment : Fragment() {
 
         with(binding) {
             btnRegister.setOnClickListener {
-                val firestoreUserRepository = FirestoreUserRepository(requireContext())
-                firestoreUserRepository.registerUser(
+                val userRepository = UserRepository(requireContext())
+                userRepository.registerUser(
                     User(
                         email = viewModel.email,
                         companyName = edtPerusahaan.text.toString(),

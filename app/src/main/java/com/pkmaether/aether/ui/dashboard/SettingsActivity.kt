@@ -36,6 +36,10 @@ class SettingsActivity : AppCompatActivity() {
                 showNotificationDialog()
             }
 
+            btnTheme.setOnClickListener {
+                showThemeDialog()
+            }
+
             btnAbout.setOnClickListener {
                 showAboutSheet()
             }
@@ -48,9 +52,26 @@ class SettingsActivity : AppCompatActivity() {
         MaterialAlertDialogBuilder(this)
             .setTitle("Timer notifikasi")
             .setSingleChoiceItems(items, prefManager.getNotificationTimer()) { dialog, which ->
-                prefManager.setNotificationTimer(which)
+
             }
-            .setPositiveButton("Simpan") { dialog, which ->
+            .setPositiveButton("Oke") { dialog, which ->
+                prefManager.setNotificationTimer(which)
+                dialog.dismiss()
+            }
+            .setNegativeButton("Batal") { dialog, which ->
+                dialog.dismiss()
+            }.show()
+    }
+
+    private fun showThemeDialog() {
+        val items = arrayOf("Terang", "Gelap", "Default sistem")
+
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Pilih tema")
+            .setSingleChoiceItems(items, 2) { dialog, which ->
+
+            }
+            .setPositiveButton("Oke") { dialog, which ->
                 dialog.dismiss()
             }
             .setNegativeButton("Batal") { dialog, which ->
@@ -59,6 +80,9 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun showAboutSheet() {
-
+        val bottomSheetDialog = BottomSheetDialog(this)
+        val bottomSheetView = layoutInflater.inflate(R.layout.sheet_about, null)
+        bottomSheetDialog.setContentView(bottomSheetView)
+        bottomSheetDialog.show()
     }
 }

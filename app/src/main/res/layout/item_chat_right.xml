@@ -9,6 +9,7 @@
     android:layout_marginVertical="4dp">
 
     <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Material3.CardView.Filled"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/md_theme_secondary"
@@ -34,8 +35,7 @@
                 style="@style/TextAppearance.Material3.LabelSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="6dp"
-                android:textColor="@color/md_theme_secondaryFixedDim"
+                android:textColor="@color/md_theme_onSecondary"
                 android:text="23.99" />
 
         </LinearLayout>
